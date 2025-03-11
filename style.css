@@ -258,5 +258,16 @@ form input{
 form input:focus{
     background: rgb(229,229,299);
 }
+footer{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10em;
+    bottom:0;
+    background: 0;
+    background-color: var(--background);
+    width: 100%;
+    padding: 5em 15%;
+}
 
 
