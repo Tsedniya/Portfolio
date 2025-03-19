@@ -269,5 +269,128 @@ footer{
     width: 100%;
     padding: 5em 15%;
 }
+.col-left{
+    display:flex;
+    flex-direction:column;
+    gap:1em;
+
+}
+.col-box{
+    display:flex;
+    align-items: center;
+    gap: 1em;
+}
+.col-box i{
+    font-size: 2em;
+}
+
+.col-box span{
+    font-size: 1.2em;
+
+}
+.col-right{
+    display:flex;
+    flex-direction: column;
+    gap: 1em;
+    color: white;
+    max-width: 500px;
+}
+.col-right span{
+    font-size: 1.3em;
+}
+.col-right .social-icons i{
+    display:flex;
+    align-items: baseline;
+    justify-content: left;
+    gap:1em
+}
+.col-right .social-icons i{
+    display:flex;
+    transition:0.2 ease-in-out;
+    cursor:pointer
+}
+.social-icons i:hover{
+    color: white;
+}
+@media(max-width:968px){
+    section{
+        padding: 8em 15%;
+    }
+    nav .btn{
+        display: none;
+    }
+    #menu{
+        display: block;
+    }
+    .links{
+        position: absolute;
+        top: 100%;
+
+        width: 100%;
+        padding:1em 3em;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: rgb(0,0,0,0.9) green, blue)
+        
+    }
+    .links a{
+        margin: 2em 0;
+        display: block;
+        font-size: 1.5em;
+        color:white;
+    }
+    .links.active{
+        display:block;
+    }
+    #home h1{
+        font-size: 4em;
+    }
+    #home h3{
+        font-size: 2em;
+    }
+    #home img{
+        width: 32vw;
+    }
+    #about h1{
+        font-size: 3em;
+    }
+    #about ul{
+        font-size: 1em;
+
+    }
+    
+}
+@media
+    (max-width: 768px){
+        #home h1{
+            font-size: 2.5em;
+        }
+        #home h3{
+            font-size: 1.5em;
+        }
+        #home img{
+            width: 32vw;
+        }
+        #about .skills{
+            gap: 3em;
+        }
+        #services .header{
+            font-size: 3em;
+        }
+        #contact .input-box span{
+            font-size: 1.2em;
+        }
+        .input-box input{
+            padding: 0.5em 1em;
+        }
+        footer{
+            flex-direction: column;
+            gap: 5em;
+            align-items: baseline;
+        }
+
+}
 
 
