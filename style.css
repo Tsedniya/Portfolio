@@ -305,8 +305,8 @@ footer{
     gap:1em
 }
 .col-right .social-icons i{
-    display:flex;
-    transition:0.2 ease-in-out;
+    font-size: 2em;
+    transition:0.2s ease-in-out;
     cursor:pointer
 }
 .social-icons i:hover{
@@ -332,7 +332,7 @@ footer{
         display: flex;
         flex-direction: column;
         text-align: center;
-        background: rgb(0,0,0,0.9) green, blue)
+        background: rgb(0,0,0,0.9) green, blue;
         
     }
     .links a{
