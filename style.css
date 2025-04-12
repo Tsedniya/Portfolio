@@ -11,35 +11,26 @@
 :root {
     --background: rgb(24, 24, 24);
     --second-background: rgb(21, 21, 21);
-    --btn-background: white; /* Background color for buttons */
-    --btn-hover: rgba(15, 15, 15, 0.8); /* Hover effect color */
+    --btn-background: white;
+    --btn-hover: rgba(15, 15, 15, 0.8);
+    --text-color: white;
 }
 
 body {
     min-height: 100vh;
     background-color: var(--background);
+    color: var(--text-color);
 }
 
-#about .about-box p {
-    color: white;  
-    opacity: 0.8;  
-    line-height: 1.6; 
-    margin-bottom: 1em; 
-    text-align: justify; 
-    padding: 0 1em; 
+
+p {
+   
+    line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+   
 }
 
-#about .about-box h1 {
-    color: white;  
-    opacity: 1;    
-}
-
-.info-box p, 
-.box p, 
-#home .info-box p {
-    color: white;  
-    opacity: 1;    
-}
 
 nav {
     position: fixed;
@@ -66,24 +57,26 @@ nav {
     opacity: 1;
 }
 
+
+
 #menu {
     color: white;
     font-size: 3em;
-    display: none; 
+    display: none;
 }
 
 ul {
-    display: flex; 
+    display: flex;
     align-items: center;
     gap: 3em;
 }
 
 .links {
-    display: flex; 
+    display: flex;
 }
 
 .links.active {
-    display: flex; 
+    display: flex;
 }
 
 nav ul a {
@@ -95,20 +88,7 @@ nav ul a {
 nav ul a:hover {
     opacity: 1;
 }
-/* Global styles for all paragraphs */
-p {
-    font-size: 1.2em; /* Set a consistent font size */
-    font-family: 'Poppins', sans-serif; /* Use the same font family */
-    color: white; /* Ensure text is white */
-    line-height: 1.6; /* Improve line spacing */
-    opacity: 0.5; /* Optional: adjust opacity */
-}
 
-/* Specific adjustments for "About Me" and "Services" sections */
-#about .about-info p,
-#services .box p {
-    font-weight: bold; /* Make these specific paragraphs bold */
-}
 
 .btn {
     padding: 0.5em 1em;
@@ -133,10 +113,12 @@ span {
     color: transparent;
 }
 
+
 section {
     min-height: 100vh;
     padding: 5% 15%;
 }
+
 
 #home {
     display: flex;
@@ -144,14 +126,6 @@ section {
     align-items: center;
     justify-content: center;
     gap: 2em;
-    color: white;
-}
-
-#home .info-box p {
-    line-height: 1.6; 
-    margin: 1em 0; 
-    text-align: justify; 
-    padding: 0 1em; 
 }
 
 #home img {
@@ -161,13 +135,13 @@ section {
 }
 
 #home .btn {
-    background-color: var(--btn-background); /* Same as Hire Me */
-    color: var(--background); /* Text color */
+    background-color: var(--btn-background);
+    color: var(--background);
 }
 
 #home .btn:hover {
-    background-color: var(--btn-hover); /* Hover effect */
-    color: var(--btn-background); /* Change text color on hover */
+    background-color: var(--btn-hover);
+    color: var(--btn-background);
 }
 
 .info-box {
@@ -188,11 +162,6 @@ section {
     font-weight: 400;
 }
 
-.info-box p {
-    color: white; 
-    opacity: 1; 
-}
-
 .btn-box {
     display: flex;
     gap: 1rem;
@@ -208,14 +177,6 @@ section {
     color: var(--btn-background);
 }
 
-::-webkit-scrollbar {
-    width: 20px;
-    background-color: var(--background);
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #6cff52, #3ec5ff);
-}
 
 #about {
     background-color: var(--second-background);
@@ -241,17 +202,8 @@ section {
     font-size: 5em;
 }
 
-.about-box p {
-    color: white;
-    opacity: 0.8;
-    line-height: 1.6; 
-    margin-bottom: 1em 0;
-    text-align: justify;
-    padding: 0 1em; 
-}
-
 .about-info {
-    text-align: left; 
+    text-align: left;
     max-width: 600px;
     padding: 1em;
 }
@@ -292,6 +244,7 @@ section {
     font-size: 2.5em;
 }
 
+
 #services {
     background-color: var(--background);
 }
@@ -318,7 +271,6 @@ section {
     object-fit: cover;
     padding: 3em;
     gap: 2em;
-    color: white;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
@@ -327,34 +279,16 @@ section {
     border: 3px solid rgb(100, 100, 100);
 }
 
-.box p {
-    opacity: 0.8;
-    line-height: 1.4; 
-    margin: 1em 0; 
-    text-align: justify; 
-    padding: 0 1em;
-    margin-top: 0; 
-    margin-bottom: 0; 
-}
-
-.input-box input {
-    text-align: center; 
-}
-
-p {
-    color: white;  
-    opacity: 0.9;  
-}
-
 .box h1 {
     font-size: 2.5em;
-    margin-bottom: 0; 
+    margin-bottom: 0;
 }
 
 .box img {
     min-width: 25px;
     border-radius: 0.5em;
 }
+
 
 #contact {
     background-color: var(--second-background);
@@ -376,33 +310,19 @@ form .input-box {
     gap: 2em;
 }
 
-.info-box span {
-    font-size: 1.5em;
-}
-#services .box p {
-    font-weight: bold; /* Make the paragraph text bold */
-    color: white; /* Ensure the text color is white */
-    opacity: 0.5; /* Optional: adjust opacity if needed */
-    line-height: 1.6; /* Improve line spacing */
-}
-#about .about-info p {
-    font-weight: bold; /* Make the paragraph text bold */
-    color: white; /* Ensure the text color is white */
-    opacity: 0.5; /* Optional: adjust opacity if needed */
-    line-height: 1.6; /* Improve line spacing */
-}
-
 form input {
     font-size: 1.3em;
     padding: 1em 5em;
     border-radius: 0.5em;
     border: none;
     outline: none;
+    text-align: center;
 }
 
 form input:focus {
     background: rgba(229, 229, 229, 0.8);
 }
+
 
 footer {
     display: flex;
@@ -439,20 +359,13 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    color: white;
     max-width: 500px;
 }
 
-.col-right p {
-    text-align: justify; 
-    line-height: 1.6; 
-    margin-bottom: 1em; 
-}
-
 .col-right span {
-    display: block; 
+    display: block;
     margin-bottom: 0.5em;
-    font-size: 1.3em; 
+    font-size: 1.3em;
 }
 
 .social-icons {
@@ -464,38 +377,68 @@ footer {
 
 .social-icons i {
     font-size: 2em;
-    color: white; 
-    opacity: 0.8; 
+    color: white;
+    opacity: 0.8;
     transition: 0.2s ease-in-out;
     cursor: pointer;
 }
 
 .social-icons i:hover {
-    opacity: 1; 
-    color: #0cbd73; 
+    opacity: 1;
+    color: #0cbd73;
 }
 
-/* Media Queries for Mobile Responsiveness */
+
+::-webkit-scrollbar {
+    width: 20px;
+    background-color: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #6cff52, #3ec5ff);
+}
+
+
 @media (max-width: 768px) {
     #menu {
-        display: block; 
+        display: block;
     }
 
     .links {
-        display: none; 
-        flex-direction: column; 
-        position: absolute; 
-        top: 60px; 
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
         right: 0;
-        width: 100%; 
+        width: 100%;
         background: rgba(0, 0, 0, 0.9);
     }
 
     .links.active {
-        display: flex; 
+        display: flex;
     }
 
     ul {
-        display: none; 
+        display: none;
+    }
+
+  
+    section {
+        padding: 5% 10%;
+    }
+
+
+    #home img {
+        width: 40vw;
+    }
+
+    #about img {
+        width: 60vw;
+    }
+
+
+    footer {
+        flex-direction: column;
+        gap: 3em;
     }
 }
