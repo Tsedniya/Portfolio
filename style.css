@@ -14,6 +14,8 @@
     --btn-background: white;
     --btn-hover: rgba(15, 15, 15, 0.8);
     --text-color: white;
+    --input-width: 500px;
+    --input-padding: 1em;
 }
 
 body {
@@ -22,15 +24,11 @@ body {
     color: var(--text-color);
 }
 
-
 p {
-   
     line-height: 1.6;
     text-align: justify;
     text-justify: inter-word;
-   
 }
-
 
 nav {
     position: fixed;
@@ -56,8 +54,6 @@ nav {
 .logo:hover {
     opacity: 1;
 }
-
-
 
 #menu {
     color: white;
@@ -89,22 +85,90 @@ nav ul a:hover {
     opacity: 1;
 }
 
-
-.btn {
-    padding: 0.5em 1em;
-    color: white;
-    font-weight: 500;
-    letter-spacing: 1px;
-    border-radius: 0.5em;
-    font-size: 1.1em;
-    border: 2px solid white;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
+/* Updated Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    width: 100%;
 }
 
-.btn:hover {
-    background-color: var(--btn-background);
-    color: var(--background);
+form .input-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: var(--input-width);
+    gap: 0.5em;
+}
+
+form input,
+form textarea {
+    font-size: 1.3em;
+    padding: var(--input-padding);
+    border-radius: 0.5em;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    transition: 0.3s ease;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #3ec5ff;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+form textarea {
+    resize: none;
+    height: 150px;
+    min-height: 100px;
+}
+
+
+
+/* Submit Button Styles */
+.submit-btn {
+    padding: 0.5em 1.5em; /* Adjust padding as needed */
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    border: none; /* Remove border */
+    border-radius: 0.5em; /* Rounded corners */
+    font-size: 1.1em; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: 0.3s ease-in-out; /* Smooth transition */
+}
+
+.submit-btn:hover {
+    background-color: black; /* Black background on hover */
+    color: white; /* White text on hover */
+}
+
+/* Contact Button Styles */
+.contact-btn {
+    padding: 0.7em 2em; /* Adjust padding for contact button */
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 0.5em; /* Rounded corners */
+    font-size: 1.1em; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: 0.3s ease-in-out; /* Smooth transition */
+}
+
+.contact-btn:hover {
+    background-color: white; /* White background on hover */
+    color: black; /* Black text on hover */
 }
 
 span {
@@ -113,12 +177,10 @@ span {
     color: transparent;
 }
 
-
 section {
     min-height: 100vh;
     padding: 5% 15%;
 }
-
 
 #home {
     display: flex;
@@ -176,7 +238,6 @@ section {
     background-color: var(--background);
     color: var(--btn-background);
 }
-
 
 #about {
     background-color: var(--second-background);
@@ -244,7 +305,6 @@ section {
     font-size: 2.5em;
 }
 
-
 #services {
     background-color: var(--background);
 }
@@ -289,40 +349,12 @@ section {
     border-radius: 0.5em;
 }
 
-
 #contact {
     background-color: var(--second-background);
-}
-
-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 2em;
 }
-
-form .input-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2em;
-}
-
-form input {
-    font-size: 1.3em;
-    padding: 1em 5em;
-    border-radius: 0.5em;
-    border: none;
-    outline: none;
-    text-align: center;
-}
-
-form input:focus {
-    background: rgba(229, 229, 229, 0.8);
-}
-
 
 footer {
     display: flex;
@@ -388,7 +420,6 @@ footer {
     color: #0cbd73;
 }
 
-
 ::-webkit-scrollbar {
     width: 20px;
     background-color: var(--background);
@@ -397,7 +428,6 @@ footer {
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(to bottom, #6cff52, #3ec5ff);
 }
-
 
 @media (max-width: 768px) {
     #menu {
@@ -422,11 +452,9 @@ footer {
         display: none;
     }
 
-  
     section {
         padding: 5% 10%;
     }
-
 
     #home img {
         width: 40vw;
@@ -436,6 +464,14 @@ footer {
         width: 60vw;
     }
 
+    :root {
+        --input-width: 90%;
+    }
+
+    form input,
+    form textarea {
+        font-size: 1.1em;
+    }
 
     footer {
         flex-direction: column;
