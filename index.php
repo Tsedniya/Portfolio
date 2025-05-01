@@ -14,15 +14,16 @@
         <ul class="links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#services">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <a href="#contact" class="contact-btn"> Contact </a>
     </nav>
-
     <?php 
     require 'home.php'; 
     require 'about.php'; 
     require 'contact.php'; 
+    require 'experience';
     ?>
 
     <footer>
@@ -43,7 +44,7 @@
     
         <div class="col-right">
             <span>About My Services</span>
-            <p>Building responsive and user-friendly websites...</p>
+            <p>Building responsive and user-friendly websites using HTML, CSS, and JavaScript. I focus on clean coding practices and SEO optimization to ensure your site performs well. Crafting interactive user interfaces that are not only visually appealing but also functionally robust.</p>
             <div class="social-icons">
                 <a href="https://t.me/simply_tsedi" target="_blank"><i class='bx bxl-telegram'></i></a>
                 <a href="https://www.linkedin.com/in/tsedniya-frezewed/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
